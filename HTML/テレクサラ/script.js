@@ -27,8 +27,8 @@ let blockInterval = 2000;
 let blockCount = 1;
 let gameActive = false;
 let blockGenerator;
-const normalImage = 'テレクサラimage/通常カナ.png';
-const jumpImage = 'テレクサラimage/ジャンプカナ.png';
+const normalImage = 'テレクサラimage/通常カナ.PNG';
+const jumpImage = 'テレクサラimage/ジャンプカナ.PNG';
 let jumpHeight = 13; 
 
 function getRandomSpeed() {
@@ -305,7 +305,7 @@ function createBlock() {
 }
 
 function changeCharacterImage(isJumping) {
-    character.style.backgroundImage = isJumping ? `url('テレクサラimage/ジャンプカナ.png')` : `url('テレクサラimage/通常カナ.png')`;
+    character.style.backgroundImage = isJumping ? `url('テレクサラimage/ジャンプカナ.PNG')` : `url('テレクサラimage/通常カナ.PNG')`;
 }
 
 document.addEventListener('keydown', (event) => {
