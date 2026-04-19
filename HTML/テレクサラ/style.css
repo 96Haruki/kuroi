@@ -17,7 +17,7 @@ body {
 
     border: 3px solid #000;
     border-radius: 30px;
-    background-image: url('テレクサラimage/背景.GIF');
+    background-image: url('./テレクサラ/テレクサラimage/背景.GIF');
     background-size: cover;
     background-position: center;
 
@@ -31,7 +31,7 @@ body {
 #character {
     width: 60px;
     height: 80px;
-    background-image: url('テレクサラimage/通常カナ.PNG');
+    background-image: url('./テレクサラ/テレクサラimage/通常カナ.PNG');
     background-size: cover;
     position: absolute;
     bottom: 0;
@@ -43,7 +43,7 @@ body {
 .jump-block {
     width: 90px;
     height: 55px;
-    background-image: url('テレクサラimage/車.PNG');
+    background-image: url('./テレクサラ/テレクサラimage/車.PNG');
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
@@ -81,11 +81,11 @@ body {
     z-index: 20;
 }
 #game-over {
-    background-image: url('テレクサラimage/ゲームオーバー.PNG');
+    background-image: url('./テレクサラ/テレクサラimage/ゲームオーバー.PNG');
 }
 
 #clear-screen {
-    background-image: url('テレクサラimage/クリアー.PNG');
+    background-image: url('./テレクサラ/テレクサラimage/クリアー.PNG');
 }
 
 /* ボタン */
