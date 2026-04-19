@@ -31,7 +31,7 @@ body {
 #character {
     width: 60px;
     height: 80px;
-    background-image: url('テレクサラimage/通常カナ.PNG');
+    background-image: url('./テレクサラ/テレクサラimage/通常カナ.PNG');
     background-size: cover;
     position: absolute;
     bottom: 0;
