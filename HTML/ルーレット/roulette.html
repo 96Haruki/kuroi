@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>スロットゲーム</title>
+    <style>
+        #slot-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px auto;
+            flex-direction: column;
+        }
+        .slot {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 150px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            position: relative;
+            margin: 0 10px;
+        }
+        .slot-items {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .slot-item {
+            width: 100px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .slot-item img {
+            width: 80px;
+            height: 80px;
+        }
+        #result {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        #reset {
+            display: none;
+        }
+        #button-container{
+            display: flex;
+            justify-content: center;
+        }
+        #slots{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="result"></div>
+    <div id="slot-container">
+        <div id="slots">
+            <div class="slot" data-img="img/apple.png">
+                <div class="slot-items" id="slot1"></div>
+            </div>
+            <div class="slot" data-img="img/banana.png">
+                <div class="slot-items" id="slot2"></div>
+            </div>
+            <div class="slot" data-img="img/cherry.png">
+                <div class="slot-items" id="slot3"></div>
+            </div>
+        </div>
+        <div id="button-container">
+            <button id="spin">スピン！</button>
+            <button id="reset">リセット</button>
+        </div>
+    </div>
+    <audio id="spin-sound" src="ルーレットBGM/スピン.mp3"></audio>
+    <audio id="win-sound" src="win.mp3"></audio>
+    <audio id="lose-sound" src="lose.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

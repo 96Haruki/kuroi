@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テレクサラ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css"> 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content="image/クリアー.png">
+</head>
+
+<body>
+    <div id="text-title">
+        <h1>カナちゃんが車にぶつかったら単純にお前のせいゲーム</h1>
+        <a href="../index.html">ホームに戻る</a>
+    </div>
+    <div id="game-container">
+        <div id="start-screen">
+            <h1>カナちゃんが車にぶつかったら<br>
+                単純にお前のせいゲーム</h1>
+            <button id="start-button">スタート</button>
+        </div>
+        <div id="character"></div>
+        <div id="game-over">
+            <h2 id="game-over-title" class="text-back">お前のせいでカナは死にました</h2>
+            
+            <button id="restart-button">もう一度＜R＞</button>
+        </div>
+        <div id="clear-screen">
+            <h2 class="text-back">お前がカナを救いました</h2>
+            <button id="restart-button-clear">もう一度＜R＞</button>
+        </div>
+        <div id="score-display-top">回避した回数: 0</div> 
+    </div>
+    <button id="jump-button">▲</button>
+    
+   
+    <hr>
+    <div id="detail">
+        
+        <div id="rule">
+            <h2>ルール</h2>
+            <p>車を20回飛び越えるだけのゲームです。<br>
+                カナちゃんが車にぶつかったら単純にお前のせいです。<br> 
+                いろんな車のタイプがあるので気を付けてくださいね。<br>
+            </p>
+        </div>
+        <div id="play-pc">
+            <h2>操作方法（パソコン版）</h2>
+            <p>「W」 or 「↑」キー：ジャンプ</p>
+        </div>
+        <div id="play-mobile">
+            <h2>操作方法（モバイル版）</h2>
+            <p>▲ボタンを押すとカナちゃんジャンプします。<br>
+        </div>
+        <div id="terekusara">
+            <h2>カナちゃんって誰？</h2>
+            <p>
+                クロイが作った、くそアニメーションに登場する女の子。
+            </p>
+            <!-- <a href="https://youtube.com/playlist?list=PLOXRLqkfrwbIkkE3rCIHvZpTjDX_FjwE5&si=gt-YKa3RXRMLb-fg" target="_blank">テレクサラ本編<a> -->
+        </div>
+        <div id="credit">
+            <h2>クレジット</h2>
+            <p>プレイBGM：<a href="https://dova-s.jp/bgm/play21706.html" target="_blank">gooset様</a></p>
+            <p>クリアBGM：<a href="https://dova-s.jp/bgm/play18024.html#google_vignette" target="_blank">マニーラ様</a></p>
+            <br>
+            
+        </div>
+       
+        <div id="notplay">
+            <h2>このゲームはこの端末に対応していません</h2>
+            <p>
+                詳しくは<a href="../プレイ可能端末/play.html" target="_blank">プレイ可能端末</a>をご確認ください。
+                <!-- お問い合わせは<a href="https://x.com/kuroitadashi" target="_blank">クロイタダシ</a>まで。 -->
+            </p>
+            <br>
+            <p>対応端末（2025年4月4日現在）</p>
+           
+
+            <table border="1">
+                <tr>
+                    <th>各種端末</th>
+                    <th>対応（〇=可,×=不可,△=動作不安定）</th>
+                </tr>
+                <tr>
+                    <td>Windows（Core i3以上）</td>
+                    <td>〇</td>
+                </tr>
+                <tr>
+                    <td>MacOS</td>
+                    <td>〇</td>
+                </tr>
+                <tr>
+                    <td>Chromebook</td>
+                    <td>△</td>
+                </tr>
+                <tr>
+                    <td>Android（スマホ）</td>
+                    <td>×（制作中）</td>
+                </tr>
+                <tr>
+                    <td>Android（タブレット）</td>
+                    <td>×</td>
+                </tr>
+                <tr>
+                    <td>iPhone</td>
+                    <td>×（制作中）</td>
+                </tr>
+                <tr>
+                    <td>iPad</td>
+                    <td>×</td>
+                </tr>
+                <tr>
+                    <td>その他端末・OS</td>
+                    <td>△</td>
+                </tr>
+            </table>
+            <a href="../index.html">ホームに戻る</a>
+            <img src="../image/Sorry.PNG" alt="Sorry">
+        </div>
+    </div>
+    <audio id="block-sound" src="テレクサラBGM/車の急ブレーキ1.mp3"></audio>
+    <audio id="jump-sound" src="テレクサラBGM/可愛く座る.mp3"></audio>
+    <audio id="collision-sound" src="テレクサラBGM/カークラッシュ.mp3"></audio>
+    <audio id="bgm" src="テレクサラBGM/パズル気分.mp3" loop></audio>
+    <audio id="jump-block-sound" src="テレクサラBGM/ジャンプ.mp3"></audio>
+    <audio id="orin-sound" src="テレクサラBGM/チーン1.mp3"></audio>
+    <audio id="clear-bgm" src="テレクサラBGM/ゲームクリアー.mp3" loop></audio>
+    <script src="script.js"></script>
+ 
+    <div id="caveat">
+        <hr>
+        <p>※時々一緒にジャンプしてくる車があると指摘されていますが、そういう仕様です</p>
+        <p>※うまく動作しない場合は<a href="../プレイ可能端末/play.html" target="_blank">プレイ可能端末</a>かどうかをご確認ください</p>
+        <!-- <p>このゲームに対してのお問い合わせは<a href="https://x.com/kuroitadashi" target="_blank">クロイタダシ</a>まで</p> -->
+    </div>
+    <footer>
+        <!-- Ⓒtadashi kuroi  2025~this year -->
+    </footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body{
+    text-align: center;
+    width: 90%; 
+    margin:auto; 
+}
+img{
+    width: 100%;
+    margin: 20px;
+}
+footer{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+}
+
+
+@media screen and (orientation: portrait) {
+    footer{
+        text-align: center;
+        position: sticky;
+        background-color: rgb(255, 255, 255);
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+    

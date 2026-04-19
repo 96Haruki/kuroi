@@ -1,0 +1,38 @@
+#slot-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px auto;
+        }
+        .slot {
+            width: 100px;
+            height: 150px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            position: relative;
+        }
+        .slot-items {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: transform 1s ease-in-out;
+        }
+        .slot-item {
+            width: 100px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+        #result {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            font-size: 18px;
+        }

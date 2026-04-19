@@ -1,0 +1,241 @@
+body {
+    margin: 0;
+    overflow: auto;
+}
+
+/* タイトル */
+#text-title {
+    text-align: center;
+}
+
+/* ゲーム画面 */
+#game-container {
+    width: 90vw;
+    max-width: 500px;
+    height: 60vw;
+    max-height: 300px;
+
+    border: 3px solid #000;
+    border-radius: 30px;
+    background-image: url('テレクサラimage/背景.gif');
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+    font-family: "DotGothic16", sans-serif;
+}
+
+/* キャラ */
+#character {
+    width: 60px;
+    height: 80px;
+    background-image: url('テレクサラimage/通常カナ.png');
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+}
+
+/* 障害物 */
+.block,
+.jump-block {
+    width: 90px;
+    height: 55px;
+    background-image: url('テレクサラimage/車.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+}
+
+/* 半透明テキスト背景 */
+.text-back {
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 8px;
+    border-radius: 10px;
+}
+
+/* ===== オーバーレイ（超重要修正） ===== */
+#game-over,
+#clear-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+
+    display: none;
+
+    /* ここが本体 */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+    z-index: 20;
+}
+#game-over {
+    background-image: url('テレクサラimage/ゲームオーバー.png');
+}
+
+#clear-screen {
+    background-image: url('テレクサラimage/クリアー.png');
+}
+
+/* ボタン */
+#restart-button,
+#restart-button-clear {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    border: 8px double #2a9231;
+
+    margin-top: 140px;
+
+    position: static; /* ←これ重要 */
+}
+
+/* スコア */
+#score-display-top {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    z-index: 10;
+
+    font-size: clamp(14px, 4vw, 20px);
+}
+
+/* スタート画面 */
+#start-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    text-align: center;
+    padding: 20px;
+}
+
+#start-screen h1 {
+    font-size: clamp(16px, 5vw, 28px);
+}
+
+#start-button {
+    padding: 10px 20px;
+    background-color: #4cae4f;
+    border: 8px double #2a9231;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ジャンプボタン（デフォ非表示） */
+#jump-button {
+    display: none;
+}
+
+/* 詳細エリア */
+#detail {
+    display: flex;
+    text-align: center;
+    margin-top: 80px;
+    justify-content: space-around;
+}
+
+#play-pc {
+    display: block;
+}
+
+#play-mobile {
+    display: none;
+}
+
+#caveat {
+    text-align: center;
+}
+
+#notplay {
+    display: none;
+}
+
+img {
+    width: 100%;
+    margin: 20px;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ===== スマホ対応 ===== */
+@media screen and (max-width: 768px) {
+
+    /* UI切り替え */
+    #play-pc {
+        display: none;
+    }
+
+    #play-mobile {
+        display: block;
+    }
+
+    /* ジャンプボタン表示 */
+    #jump-button {
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 20px;
+        font-size: 24px;
+        background-color: #2a9231;
+        color: white;
+        border: none;
+        border-radius: 50%;
+    }
+
+    /* テキスト調整 */
+    #game-over h2,
+    #clear-screen h2 {
+        font-size: clamp(14px, 4vw, 18px);
+    }
+
+    /* レイアウト縦 */
+    #detail {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    #restart-button,
+    #restart-button-clear {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        border-radius: 30px;
+        color: white;
+        cursor: pointer;
+        border: 8px double #2a9231;
+
+        margin-top: 100px;
+
+        position: static; /* ←これ重要 */
+    }
+
+
+}
