@@ -305,7 +305,7 @@ function createBlock() {
 }
 
 function changeCharacterImage(isJumping) {
-    character.style.backgroundImage = isJumping ? `url('テレクサラimage/ジャンプカナ.png')` : `url('テレクサラimage/通常カナ.png')`;
+    character.style.backgroundImage = isJumping ? `url('./テレクサラ/テレクサラimage/ジャンプカナ.png')` : `url('./テレクサラ/テレクサラimage/通常カナ.png')`;
 }
 
 document.addEventListener('keydown', (event) => {
