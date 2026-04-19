@@ -120,7 +120,7 @@ function update() {
     }
     
     //ゲームクリア条件を変更
-    if (score >= 1) { 
+    if (score >= 20) { 
         gameClear();
         return;
     }
