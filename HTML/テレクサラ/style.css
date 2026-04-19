@@ -17,7 +17,7 @@ body {
 
     border: 3px solid #000;
     border-radius: 30px;
-    background-image: url('テレクサラimage/背景.gif');
+    background-image: url('テレクサラimage/背景.GIF');
     background-size: cover;
     background-position: center;
 
@@ -31,7 +31,7 @@ body {
 #character {
     width: 60px;
     height: 80px;
-    background-image: url('テレクサラimage/通常カナ.png');
+    background-image: url('テレクサラimage/通常カナ.PNG');
     background-size: cover;
     position: absolute;
     bottom: 0;
